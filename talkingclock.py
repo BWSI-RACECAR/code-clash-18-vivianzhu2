@@ -47,7 +47,7 @@ class Solution:
                 output+='oh '
             else:
                 output+= tensword[int(minute[0])*10] +' '
-            output+= minute[1]+' '
+            output+= onesword[int(minute[1])]+' '
             if(ampm):
                 output+= 'am'
             else:
