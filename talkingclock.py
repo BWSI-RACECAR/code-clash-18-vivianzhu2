@@ -33,20 +33,21 @@ class Solution:
             #type input_time: string
             #return type: string
             onesword={1:'one',2: 'two',3:'three',4: 'four', 5:'five',6 :'six', 7: 'seven', 8:'eight',9: 'nine', 10: 'ten', 11:'eleven', 12:'twelve', 13: 'thirteen',14:'fourteen',15:'fifteen', 16: 'sixteen', 17:'seventeen', 18:'eighteen', 19:'nineteen'}
-            tensword = {2: 'twenty', 3:'thirty', 4: 'forty',5:'fifty'}
+            tensword = {20: 'twenty', 30:'thirty', 40: 'forty',50:'fifty'}
             output="It's "
             ampm=True
             hour= input_time[:2]
-            if hour>12:
-                hour= hour%12
+            if (int(hour))>(12):
+                hour= int(hour)%12
                 ampm=False
             output+= onesword[hour] +' '
-            minute= input_time[len(input_time)-3, len(input_time)]
+            minute= input_time[len(input_time)-2: len(input_time)]
+            print(minute)
             if minute[0] ==0:
                 output+='oh '
             else:
-                output+= tensword[minute[0]/10 %10] +' '
-            output+= minute[1]
+                output+= tensword[int(minute[0])*10] +' '
+            output+= minute[1]+' '
             if(ampm):
                 output+= 'am'
             else:
