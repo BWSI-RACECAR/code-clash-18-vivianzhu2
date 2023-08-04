@@ -44,7 +44,7 @@ class Solution:
             minute= input_time[len(input_time)-2: len(input_time)]
             print(minute)
             if minute[0] ==0:
-                output+='oh '
+                output+='oh clockest'
             else:
                 output+= tensword[int(minute[0])*10] +' '
             output+= onesword[int(minute[1])]+' '
